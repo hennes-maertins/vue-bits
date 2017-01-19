@@ -1,0 +1,19 @@
+{
+  "name": "vue-bits",
+  "authors": [
+    "Hennes Märtins"
+  ],
+  "description": "Little demo that shows the interaction between a text input field and checkboxes using the Vue.js framework.",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue": "^2.1.10"
+  }
+}

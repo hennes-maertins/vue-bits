@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>vue-of-up-to-16-bits</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="questions.css" media="screen" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="bower_components/vue/dist/vue.min.js"></script>
+    <script type="text/javascript" src="vue-bits.js"></script>
+  </head>
+  <body>
+    <h1>Vue of up to 16 bits</h1>
+    <div>
+      <p>Little demo that shows the interaction between a text input field and checkboxes using the <a href="https://vuejs.org">Vue.js</a> framework. Depending on the value of the input field more or less checkboxes are rendered with a minimum of 4 and a maximum of 16. The minimum value of the input field is 0, the maximum is 131071.</p>
+    </div>
+    <div id="app">
+      <label>Value: <input type="text" v-model="value"></label>
+      <div>
+        <ul>
+          <li v-for="bit in bits">
+            <span><input type="checkbox" v-model="bit.isSet" v-on:change="calculateValue"> {{bit.pos}} => {{Math.pow(2, bit.pos)}}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
